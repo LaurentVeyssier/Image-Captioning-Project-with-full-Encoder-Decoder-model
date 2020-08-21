@@ -33,7 +33,7 @@ After one epoch: The context of the image is already captured in the proposed ca
 
 ![](asset/sample-1-epoch-SGD-optim.PNG)
 
-After two epochs: The context of the image is fully captured in the proposed caption but there are images with a totally wrong caption.
+After two epochs: For most images, the context is fully captured in the proposed caption (but there are images with totally wrong caption).
 
 ![](asset/sample-2-epoch-Adam-optim.PNG)
 
