@@ -23,10 +23,10 @@ Based on previous literature (see this [paper](https://arxiv.org/pdf/1411.4555.p
 
 Overall the model has 12.227.735 learnable parameters (the pre-trained CNN extractor is fixed).
 
-I used both SGD and Adam optimizer. Results achieved after one epoch were promising in both cases. Samples are shown below.
+I used Adam optimizer with standard parameters. Results achieved after one epoch were promising and improved with further training (3 epochs in total, for a total of 8 hours). Samples are shown below.
 
 ## Results
 
-After one epoch using SGD optimizer (lr=0.01, no momentum). Some context of the image is captured in the proposed caption which is still approximative ('surfboard' and 'ocean' correct, 'ridding' not correct).
+After one epoch: The context of the image is already captured in the proposed caption but it remains approximative ('surfboard' and 'ocean' correct, 'ridding' not correct).
 
 ![](asset/sample-1-epoch-SGD-optim.PNG)
