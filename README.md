@@ -28,4 +28,4 @@ I used both SGD and Adam optimizer. Results achieved after one epoch were promis
 ## Results
 
 After one epoch using SGD optimizer (lr=0.01, no momentum). Some context of the image is captured in the proposed caption which is still approximative ('surfboard' and 'ocean' correct, 'ridding' not correct).
-[](asset/sample-1-epoch-SGD-optim.PNG)
+![](asset/sample-1-epoch-SGD-optim.PNG)
