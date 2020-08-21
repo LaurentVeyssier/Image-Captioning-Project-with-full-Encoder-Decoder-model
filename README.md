@@ -32,3 +32,8 @@ I used Adam optimizer with standard parameters. Results achieved after one epoch
 After one epoch: The context of the image is already captured in the proposed caption but it remains approximative ('surfboard' and 'ocean' correct, 'ridding' not correct).
 
 ![](asset/sample-1-epoch-SGD-optim.PNG)
+
+After two epochs: The context of the image is fully captured in the proposed caption but there are images with a totally wrong caption.
+
+![](asset/sample-2-epoch-Adam-optim.PNG)
+
