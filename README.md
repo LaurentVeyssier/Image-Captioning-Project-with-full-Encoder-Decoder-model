@@ -14,7 +14,7 @@ The model is composed of two parts:
 - A Decoder primarily composed of a LSTM network. The decoder takes on the sample captions during the training phase and generates a caption for a new image during inference, 'decoding' the proposed features extracted from the image. A fully connected layer at the end allows to map the hidden space of the LSTM to the vocab space, producing a prediction for each word sequentially.
 
 # Parameters of the Decoder model
-Based on previous literature (see this [paper]()), I used the following hyperparameters:
+Based on previous literature (see this [paper](https://arxiv.org/pdf/1411.4555.pdf)), I used the following hyperparameters:
 - word Embedding dimension of 512
 - Hidden dimension of 512
 - Batch size of 256
@@ -28,4 +28,4 @@ I used both SGD and Adam optimizer. Results achieved after one epoch were promis
 ## Results
 
 After one epoch using SGD optimizer (lr=0.01, no momentum). Some context of the image is captured in the propsoed caption which is still approximative ('surfboard' and 'ocean' correct, 'ridding' not correct).
-[](asset/sample-1epoch-SGD-optim.PNG)
+[](asset/sample-1-epoch-SGD-optim.PNG)
