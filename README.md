@@ -43,3 +43,6 @@ After two epochs: For most images, the context is fully captured in the proposed
 
 ![](asset/sample-2-epoch-Adam-optim.PNG)
 
+examples of wrong caption after 2 epochs:
+
+![](asset/sample_wrong_epoch_2.PNG)
