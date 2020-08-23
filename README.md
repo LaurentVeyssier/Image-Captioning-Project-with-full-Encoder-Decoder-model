@@ -22,6 +22,10 @@ The model is composed of two parts:
 Words proposed to the Decoder are pre-processed using tokenization and a word embedding step. Using an embedding has the advantage of being independent of the size of the dictionary (contrary to a simpler onehot-encoding approach). Each word is represented by a fixed sized vector in the embedding space. The same embedding dimension is used on the extracted image features which allows to concatenate both (features, caption) as input pair for the training. Using its memory capabilities, the LSTM learns to map words to the specific features extracted from the images and to form a meaningful caption summarizing the scene. The embedding, jointly trained during learning, contributes to the performance: The learned representations captures some semantic of the language, helping the vision component by defining coherent proximities between words.
 
 # Parameters of the Decoder model
+in details:
+- Encoder: Pre-trained ResNet > FC layer with embed_size > batchnorm1d. A BarchNorm1d layer may help equalizing the features.
+- Decoder: Embeddings (Embed size) > LSTM (1 layer, hidden dim and drop out) > DropOut(0.5) > FC layer (Vocab size)
+
 Based on previous literature (see this [paper](https://arxiv.org/pdf/1411.4555.pdf)), I used the following hyperparameters:
 - word Embedding dimension of 512
 - Hidden dimension of 512
@@ -29,9 +33,11 @@ Based on previous literature (see this [paper](https://arxiv.org/pdf/1411.4555.p
 - One LSTM layer
 - Vocab threshold of 5 (vocabulary composed by the words with 5 occurences or more in the training dataset). Total vocabulary of 8.855 words.
 
+Parameters set to be learned: All Decoder parameters, the fully connected layer from the Encoder as well as the batchNorm1d. These are all the parameters required to learn the mapping between the spacial representation from the features and the words to compose the captions. They include the word embedding which is learned in the process. The feature extractor in the Encoder uses pre-trained weights to benefit from transfer learning.
+
 Overall the model has 12.227.735 learnable parameters (the pre-trained CNN extractor is fixed).
 
-I used Adam optimizer with standard parameters. Results achieved after one epoch were promising and improved with further training (3 epochs in total, for a total of 8 hours). Samples are shown below.
+I used Adam optimizer with standard parameters. Adam is reputed to perform well on large amount of data. Results achieved after one epoch were promising and improved with further training (3 epochs in total, for a total of 8 hours). Samples are shown below.
 
 ## Results
 
@@ -46,3 +52,7 @@ After two epochs: For most images, the context is fully captured in the proposed
 examples of wrong caption after 2 epochs:
 
 ![](asset/sample_wrong_epoch_2.PNG)
+
+Summary of training :
+
+![](asset/saved_training.PNG)
