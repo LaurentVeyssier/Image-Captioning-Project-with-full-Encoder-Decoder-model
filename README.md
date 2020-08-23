@@ -55,4 +55,4 @@ examples of wrong caption after 2 epochs:
 
 Summary of training :
 
-![](asset/saved_training.PNG)
+![](asset/saved training.PNG)
