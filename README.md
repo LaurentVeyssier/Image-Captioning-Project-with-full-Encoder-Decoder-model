@@ -45,7 +45,7 @@ I used Adam optimizer with standard parameters. Adam is reputed to perform well 
 - download the [COCO dataset](https://cocodataset.org/#download), unzip and place the images into a folder `cocoapi/images` and the annotations into `cocoapi/annotations
 - run the notebooks
 
-the folder structure inside the repo hosting the notebooks should look like this:
+The folder structure inside the repo hosting the notebooks should look like this:
 
 ![](asset/folder.PNG)
 
