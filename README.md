@@ -37,7 +37,11 @@ Parameters set to be learned: All Decoder parameters, the fully connected layer 
 
 Overall the model has 12.227.735 learnable parameters (the pre-trained CNN extractor is fixed).
 
-I used Adam optimizer with standard parameters. Adam is reputed to perform well on large amount of data. Results achieved after one epoch were promising and improved with further training (3 epochs in total, for a total of 8 hours). Samples are shown below.
+I used Adam optimizer with standard parameters. Adam is reputed to [perform well on large amount of data](https://arxiv.org/pdf/1609.04747.pdf). Results achieved after one epoch were promising and improved with further training (3 epochs in total, for a total of 8 hours). Samples are shown below.
+
+# Next ?
+
+Refine the architecture introducing two LSTM layers and reducing the dropout rate (target a keep ratio of 0.75). This is based on the following detailed analysis paper [Learning CNN-LSTM Architectures for Image Caption Generation](https://cs224d.stanford.edu/reports/msoh.pdf).
 
 # How to run
 - download the repo as the working folder
