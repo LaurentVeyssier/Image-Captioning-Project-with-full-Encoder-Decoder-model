@@ -39,6 +39,8 @@ Overall the model has 12.227.735 learnable parameters (the pre-trained CNN extra
 
 I used Adam optimizer with standard parameters. Adam is reputed to [perform well on large amount of data](https://arxiv.org/pdf/1609.04747.pdf). Results achieved after one epoch were promising and improved with further training (3 epochs in total, for a total of 8 hours). Samples are shown below.
 
+Note: Applying BatchNormalization to the LSTM is not considered. In any non-recurrent network, BN implies each layer gets to adjust the incoming scale and mean so the incoming distribution for each layer doesn't keep changing (which is what the authors of the BN paper claim is the advantage of BN). The problem with doing this for the recurrent outputs of an RNN is that the parameters for the incoming distribution are now shared between all timesteps. So the distribution ends up being fixed across the temporal layers. This may not make sense as there may be structure in the data that varies across the time series. For example, if the time series is a sentence certain words are much more likely to appear in the beginning or end. So having the distribution fixed might reduce the effectiveness of BN.
+
 # Next ?
 
 Refine the architecture introducing two LSTM layers and reducing the dropout rate (target a keep ratio of 0.75). This is based on the following detailed analysis paper [Learning CNN-LSTM Architectures for Image Caption Generation](https://cs224d.stanford.edu/reports/msoh.pdf).
