@@ -39,7 +39,18 @@ Overall the model has 12.227.735 learnable parameters (the pre-trained CNN extra
 
 I used Adam optimizer with standard parameters. Adam is reputed to perform well on large amount of data. Results achieved after one epoch were promising and improved with further training (3 epochs in total, for a total of 8 hours). Samples are shown below.
 
-## Results
+# How to run
+- download the repo as the working folder
+- download the COCO PythonAPI folder and place into a folder `cocoapi` inside the working folder. The API can be found [here](https://github.com/cocodataset/cocoapi)
+- download the [COCO dataset](https://cocodataset.org/#download), unzip and place the images into a folder `cocoapi/images` and the annotations into `cocoapi/annotations
+- run the notebooks
+
+the folder structure inside the repo hosting the notebooks should look like this:
+
+![](asset/folder.PNG)
+
+
+# Results
 
 After one epoch: The context of the image is already captured in the proposed caption but it remains approximative ('surfboard' and 'ocean' correct, 'ridding' not correct).
 
