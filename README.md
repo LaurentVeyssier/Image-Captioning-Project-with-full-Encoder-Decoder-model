@@ -72,7 +72,7 @@ examples of wrong caption after 2 epochs:
 
 After four epochs: A few solid captions
 
-![](asset/sample-4-epoch.PNG)
+![](asset/sample-4-epochs.PNG)
 
 Summary of training (last 2 epochs of 4):
 
