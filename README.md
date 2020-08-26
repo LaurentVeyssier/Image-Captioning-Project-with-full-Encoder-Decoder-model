@@ -78,6 +78,6 @@ Summary of training (last 2 epochs of 4):
 
 ![](asset/saved_training.PNG)
 
-bleu scores:
+bleu scores: Only a small minimal improvement from 2 to 4 epochs
 
 ![](asset/bleu.PNG)
