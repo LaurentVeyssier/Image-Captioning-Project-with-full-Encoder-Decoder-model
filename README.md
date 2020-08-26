@@ -74,7 +74,7 @@ After four epochs: A few solid captions
 
 ![](asset/sample-4-epoch.PNG)
 
-Summary of training :
+Summary of training (last 2 epochs of 4):
 
 ![](asset/saved_training.PNG)
 
