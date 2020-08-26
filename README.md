@@ -70,6 +70,10 @@ examples of wrong caption after 2 epochs:
 
 ![](asset/sample_wrong_epoch_2.PNG)
 
+After four epochs: A few solid captions
+
+![](asset/sample-4-epoch.PNG)
+
 Summary of training :
 
 ![](asset/saved_training.PNG)
